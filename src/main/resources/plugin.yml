@@ -1,0 +1,10 @@
+name: BetonQuestAdder
+main: com.github.mrjimin.betonquestadder.BetonQuestAdderPlugin
+version: '${version}'
+api-version: 1.20
+author: MrJimin
+depend:
+  - Nexo
+  - BetonQuest
+libraries:
+  - org.jetbrains.kotlin:kotlin-stdlib-jdk8:2.1.20
