@@ -10,7 +10,6 @@ class NxItemWrapper(
 ) : QuestItemWrapper {
 
     override fun getItem(profile: Profile?): QuestItem {
-        val id = itemId.getValue(profile)
-        return NxItem(id)
+        return NxItem(itemId.getValue(profile))
     }
 }

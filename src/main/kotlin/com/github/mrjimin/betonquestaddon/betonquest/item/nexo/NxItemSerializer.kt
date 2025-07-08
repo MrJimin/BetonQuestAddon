@@ -7,8 +7,8 @@ import org.bukkit.inventory.ItemStack
 
 class NxItemSerializer : QuestItemSerializer {
 
-    override fun serialize(itemStack: ItemStack?): String {
-        if (itemStack == null || !itemStack.hasItemMeta()) {
+    override fun serialize(itemStack: ItemStack): String {
+        if (!itemStack.hasItemMeta()) {
             throw QuestException("ItemStack is null or missing metadata.")
         }
 

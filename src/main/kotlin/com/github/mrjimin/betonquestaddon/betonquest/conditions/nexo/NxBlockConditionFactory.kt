@@ -20,15 +20,13 @@ class NxBlockConditionFactory(
 
     override fun parsePlayer(instruction: Instruction): PlayerCondition {
         return PrimaryServerThreadPlayerCondition(
-            NullableConditionAdapter(parseInstruction(instruction)),
-            data
+            NullableConditionAdapter(parseInstruction(instruction)), data
         )
     }
 
     override fun parsePlayerless(instruction: Instruction): PlayerlessCondition {
         return PrimaryServerThreadPlayerlessCondition(
-            NullableConditionAdapter(parseInstruction(instruction)),
-            data
+            NullableConditionAdapter(parseInstruction(instruction)), data
         )
     }
 

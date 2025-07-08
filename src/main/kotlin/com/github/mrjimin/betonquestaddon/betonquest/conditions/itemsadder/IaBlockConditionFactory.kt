@@ -17,11 +17,15 @@ class IaBlockConditionFactory(
 ) : PlayerConditionFactory, PlayerlessConditionFactory {
 
     override fun parsePlayer(instruction: Instruction): PlayerCondition {
-        return PrimaryServerThreadPlayerCondition(NullableConditionAdapter(parseInstruction(instruction)), data)
+        return PrimaryServerThreadPlayerCondition(
+            NullableConditionAdapter(parseInstruction(instruction)), data
+        )
     }
 
     override fun parsePlayerless(instruction: Instruction): PlayerlessCondition {
-        return PrimaryServerThreadPlayerlessCondition(NullableConditionAdapter(parseInstruction(instruction)), data)
+        return PrimaryServerThreadPlayerlessCondition(
+            NullableConditionAdapter(parseInstruction(instruction)), data
+        )
     }
 
     private fun parseInstruction(instruction: Instruction): IaBlock {
