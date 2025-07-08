@@ -1,5 +1,5 @@
-name: BetonQuestAdder
-main: com.github.mrjimin.betonquestadder.BetonQuestAdderPlugin
+name: BetonQuestAddon
+main: com.github.mrjimin.betonquestaddon.BetonQuestAddonPlugin
 version: '${version}'
 api-version: 1.20
 author: MrJimin

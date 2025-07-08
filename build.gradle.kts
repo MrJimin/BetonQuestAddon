@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "com.github.mrjimin"
-version = "1.0.0"
+version = "1.0.1"
 
 repositories {
     maven {
@@ -16,14 +16,14 @@ repositories {
 
     mavenCentral()
     maven("https://repo.nexomc.com/releases")
-    // maven("https://jitpack.io")
+    maven("https://jitpack.io")
     // maven("https://nexus.betonquest.org/repository/betonquest/")
 }
 
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.21.6-R0.1-SNAPSHOT")
     compileOnly("com.nexomc:nexo:1.8.0")
-    // compileOnly("com.github.LoneDev6","api-itemsadder","2.1.25")
+    compileOnly("com.github.LoneDev6","api-itemsadder","2.1.25")
     // compileOnly("org.betonquest","betonquest","3.0.0-SNAPSHOT")
 
     // compileOnly("org.bstats","bstats-bukkit","2.2.1")

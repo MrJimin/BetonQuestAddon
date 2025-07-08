@@ -1,4 +1,4 @@
-package com.github.mrjimin.betonquestadder.util
+package com.github.mrjimin.betonquestaddon.util
 
 import net.kyori.adventure.text.Component
 import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer

@@ -1,11 +1,11 @@
-package com.github.mrjimin.betonquestadder.item
+package com.github.mrjimin.betonquestaddon.betonquest.item.nexo
 
 import com.nexomc.nexo.api.NexoItems
 import org.betonquest.betonquest.api.quest.QuestException
 import org.betonquest.betonquest.item.QuestItemSerializer
 import org.bukkit.inventory.ItemStack
 
-class ItemSerializer : QuestItemSerializer {
+class NxItemSerializer : QuestItemSerializer {
 
     override fun serialize(itemStack: ItemStack?): String {
         if (itemStack == null || !itemStack.hasItemMeta()) {

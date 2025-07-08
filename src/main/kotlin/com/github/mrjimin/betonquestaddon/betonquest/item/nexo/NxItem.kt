@@ -1,13 +1,13 @@
-package com.github.mrjimin.betonquestadder.item
+package com.github.mrjimin.betonquestaddon.betonquest.item.nexo
 
-import com.github.mrjimin.betonquestadder.util.toLegacy
+import com.github.mrjimin.betonquestaddon.util.toLegacy
 import com.nexomc.nexo.api.NexoItems
 import com.nexomc.nexo.items.ItemBuilder
 import org.betonquest.betonquest.api.profile.Profile
 import org.betonquest.betonquest.item.QuestItem
 import org.bukkit.inventory.ItemStack
 
-class NexoItem(
+class NxItem(
     private val itemId: String
 ) : QuestItem {
 

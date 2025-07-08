@@ -1,0 +1,4 @@
+# Enables automatic BetonQuest reload when Nexo's NexoItemsLoadedEvent is triggered.
+# Default: false. Set to true and restart the server to enable this feature.
+setting:
+  auto-reload: false
