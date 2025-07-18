@@ -71,6 +71,21 @@ Players must break or place a specific number of blocks.
 
 ---
 
+### ⚙️ Configuration (`config.yml`)
+> ⚠️ **Important (Temporary)!**
+> This setting is designed to reduce the need to manually reload BetonQuest quests when values are updated.
+> Enabling it will automatically reload BetonQuest upon certain events to reflect changes faster.
+> Please note this feature is **experimental** and may be changed or removed in future BetonQuest updates.
+> Use it **cautiously** and only as a temporary solution.
+```yaml
+# Enables automatic BetonQuest reload when Nexo's NexoItemsLoadedEvent is triggered.
+# Default: false. Set to true and restart the server to enable this feature.
+setting:
+  auto-reload: false
+```
+
+---
+
 #### 📦 YAML Example
 
 ```yaml
