@@ -14,15 +14,11 @@ class BetonQuestAddonPlugin : JavaPlugin() {
     override fun onEnable() {
         instance = this
 
-        Metrics(this, 26415)
+        Metrics(this, 26421)
         BetonQuestAddon(this).initialize()
         saveDefaultConfig()
 
-        // registerEvents()
-
         logger.info("BetonQuestAddon v${pluginMeta.version} successfully enabled.")
     }
-
-
 
 }
