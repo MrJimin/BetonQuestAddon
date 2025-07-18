@@ -23,7 +23,7 @@
 
 ### 📥 Installation
 
-1. Download the plugin jar from the [Releases](#) page.
+1. Download the plugin jar from the [Releases(Spigot)](https://www.spigotmc.org/resources/betonquestaddon.120813/) page.
 2. Place it into your server’s `/plugins` directory.
 3. Restart the server.
 4. Configure your BetonQuest quest files using the syntax below.
@@ -103,4 +103,4 @@ Some code and ideas were inspired by and adapted from [TheosRee/BetonQuestItemsA
 
 ### 🙋 Support
 
-If you have any issues or feature requests, feel free to open an issue on the [GitHub repository](#).
+If you have any issues or feature requests, feel free to open an issue on the [GitHub repository](https://github.com/MrJimin/BetonQuestAddon).
