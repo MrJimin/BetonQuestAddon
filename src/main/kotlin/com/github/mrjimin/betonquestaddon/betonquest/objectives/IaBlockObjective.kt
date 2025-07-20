@@ -1,6 +1,5 @@
-package com.github.mrjimin.betonquestaddon.betonquest.objectives.itemsadder
+package com.github.mrjimin.betonquestaddon.betonquest.objectives
 
-import com.github.mrjimin.betonquestaddon.betonquest.objectives.AbstractBlockObjective
 import dev.lone.itemsadder.api.CustomStack
 import org.betonquest.betonquest.api.logger.BetonQuestLogger
 import org.betonquest.betonquest.instruction.Instruction

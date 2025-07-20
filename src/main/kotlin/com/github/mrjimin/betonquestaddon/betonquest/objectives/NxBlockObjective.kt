@@ -1,6 +1,5 @@
-package com.github.mrjimin.betonquestaddon.betonquest.objectives.nexo
+package com.github.mrjimin.betonquestaddon.betonquest.objectives
 
-import com.github.mrjimin.betonquestaddon.betonquest.objectives.AbstractBlockObjective
 import org.betonquest.betonquest.api.logger.BetonQuestLogger
 import org.betonquest.betonquest.instruction.Instruction
 import org.betonquest.betonquest.instruction.variable.Variable

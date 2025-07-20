@@ -1,19 +1,19 @@
 package com.github.mrjimin.betonquestaddon.betonquest
 
 import com.github.mrjimin.betonquestaddon.BetonQuestAddonPlugin
-import com.github.mrjimin.betonquestaddon.betonquest.conditions.itemsadder.IaBlockConditionFactory
-import com.github.mrjimin.betonquestaddon.betonquest.conditions.nexo.NxBlockConditionFactory
-import com.github.mrjimin.betonquestaddon.betonquest.events.itemsadder.IaPlayAnimationEventFactory
-import com.github.mrjimin.betonquestaddon.betonquest.events.itemsadder.IaSetBlockAtEventFactory
-import com.github.mrjimin.betonquestaddon.betonquest.events.nexo.NxSetBlockAtEventFactory
-import com.github.mrjimin.betonquestaddon.betonquest.item.itemsadder.IaItemFactory
-import com.github.mrjimin.betonquestaddon.betonquest.item.itemsadder.IaItemSerializer
-import com.github.mrjimin.betonquestaddon.betonquest.item.nexo.NxItemFactory
-import com.github.mrjimin.betonquestaddon.betonquest.item.nexo.NxItemSerializer
-import com.github.mrjimin.betonquestaddon.betonquest.objectives.itemsadder.IaBlockBreakObjectiveFactory
-import com.github.mrjimin.betonquestaddon.betonquest.objectives.itemsadder.IaBlockPlaceObjectiveFactory
-import com.github.mrjimin.betonquestaddon.betonquest.objectives.nexo.NxBlockBreakObjectiveFactory
-import com.github.mrjimin.betonquestaddon.betonquest.objectives.nexo.NxBlockPlaceObjectiveFactory
+import com.github.mrjimin.betonquestaddon.betonquest.conditions.IaBlockConditionFactory
+import com.github.mrjimin.betonquestaddon.betonquest.conditions.NxBlockConditionFactory
+import com.github.mrjimin.betonquestaddon.betonquest.events.IaPlayAnimationEventFactory
+import com.github.mrjimin.betonquestaddon.betonquest.events.IaSetBlockAtEventFactory
+import com.github.mrjimin.betonquestaddon.betonquest.events.NxSetBlockAtEventFactory
+import com.github.mrjimin.betonquestaddon.betonquest.item.IaItemFactory
+import com.github.mrjimin.betonquestaddon.betonquest.item.IaItemSerializer
+import com.github.mrjimin.betonquestaddon.betonquest.item.NxItemFactory
+import com.github.mrjimin.betonquestaddon.betonquest.item.NxItemSerializer
+import com.github.mrjimin.betonquestaddon.betonquest.objectives.impl.IaBlockBreakObjectiveFactory
+import com.github.mrjimin.betonquestaddon.betonquest.objectives.impl.IaBlockPlaceObjectiveFactory
+import com.github.mrjimin.betonquestaddon.betonquest.objectives.impl.NxBlockBreakObjectiveFactory
+import com.github.mrjimin.betonquestaddon.betonquest.objectives.impl.NxBlockPlaceObjectiveFactory
 import com.github.mrjimin.betonquestaddon.listener.IaReloadListener
 import com.github.mrjimin.betonquestaddon.listener.NxReloadListener
 import com.github.mrjimin.betonquestaddon.util.checkPlugin
@@ -22,11 +22,7 @@ import org.betonquest.betonquest.item.QuestItemSerializer
 import org.betonquest.betonquest.item.QuestItemWrapper
 import org.betonquest.betonquest.kernel.registry.TypeFactory
 import org.betonquest.betonquest.quest.PrimaryServerThreadData
-import org.bukkit.Material
 import org.bukkit.Server
-import org.bukkit.inventory.ItemFactory
-import org.bukkit.inventory.ItemStack
-import team.unnamed.creative.serialize.minecraft.item.ItemSerializer
 
 class BetonQuestAddon(
     private val plugin: BetonQuestAddonPlugin
