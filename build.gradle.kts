@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "com.github.mrjimin"
-version = "1.0.2"
+version = "1.0.4"
 
 repositories {
     maven {
@@ -21,7 +21,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:1.21.6-R0.1-SNAPSHOT")
+    compileOnly("io.papermc.paper:paper-api:1.21.8-R0.1-SNAPSHOT")
     compileOnly("com.nexomc:nexo:1.8.0")
     compileOnly("com.github.LoneDev6","api-itemsadder","2.1.25")
     // compileOnly("org.betonquest","betonquest","3.0.0-SNAPSHOT")
@@ -40,15 +40,10 @@ tasks.build {
 tasks.withType<ShadowJar> {
     exclude("kotlin/**")
     exclude("org/**")
-    // relocate("dev.jorel.commandapi", "com.github.mrjimin.lib.commandapi")
-    // relocate("org.bstats", "com.github.mrjimin.lib.bstats")
 
-//    manifest {
-//        attributes["paperweight-mappings-namespace"] = "mojang"
-//    }
+    from("LICENSE")
 
     archiveFileName.set("${rootProject.name}-${rootProject.version}.jar")
-    // destinationDirectory=file("C:\\Users\\aa990\\OneDrive\\바탕 화면\\새 폴더 (9)\\plugins")
     destinationDirectory=file("C:\\Users\\aa990\\OneDrive\\바탕 화면\\BQ\\plugins")
 }
 
