@@ -1,6 +1,7 @@
 package com.github.mrjimin.betonquestaddon.listener
 
 import com.github.mrjimin.betonquestaddon.BetonQuestAddonPlugin
+import com.github.mrjimin.betonquestaddon.betonquest.BetonQuestAddon
 import com.github.mrjimin.betonquestaddon.util.NotFoundPlugin
 import com.github.mrjimin.betonquestaddon.util.checkPlugin
 import dev.lone.itemsadder.api.Events.ItemsAdderFirstLoadEvent
@@ -18,7 +19,7 @@ class IaReloadListener(
 
     @EventHandler
     fun ItemsAdderFirstLoadEvent.onIaReload() {
-        if (!plugin.config.getBoolean("setting.auto-reload")) return
+        if (!plugin.config.getBoolean(BetonQuestAddon.CONFIG_AUTO_RELOAD)) return
         BetonQuest.getInstance().reload()
     }
 }

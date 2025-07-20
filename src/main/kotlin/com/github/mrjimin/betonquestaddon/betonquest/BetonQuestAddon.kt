@@ -22,8 +22,10 @@ import org.betonquest.betonquest.item.QuestItemSerializer
 import org.betonquest.betonquest.item.QuestItemWrapper
 import org.betonquest.betonquest.kernel.registry.TypeFactory
 import org.betonquest.betonquest.quest.PrimaryServerThreadData
+import org.bukkit.Material
 import org.bukkit.Server
 import org.bukkit.inventory.ItemFactory
+import org.bukkit.inventory.ItemStack
 import team.unnamed.creative.serialize.minecraft.item.ItemSerializer
 
 class BetonQuestAddon(
@@ -48,7 +50,7 @@ class BetonQuestAddon(
     }
 
     private fun registerEvents() {
-        plugin.logger.info("Auto Reload has been enabled.")
+        if (plugin.config.getBoolean(CONFIG_AUTO_RELOAD)) plugin.logger.info("Auto Reload has been enabled.")
 
         if ("Nexo".checkPlugin()) {
             server.pluginManager.registerEvents(NxReloadListener(plugin), plugin)
@@ -94,5 +96,9 @@ class BetonQuestAddon(
         val itemRegistry = betonQuest.featureRegistries.item()
         itemRegistry.register(name, factory)
         itemRegistry.registerSerializer(name, serializer)
+    }
+
+    companion object {
+        val CONFIG_AUTO_RELOAD = "setting.auto-reload"
     }
 }

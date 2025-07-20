@@ -6,4 +6,4 @@ author: MrJimin
 depend:
   - BetonQuest
 libraries:
-  - org.jetbrains.kotlin:kotlin-stdlib-jdk8:2.1.20
+  - org.jetbrains.kotlin:kotlin-stdlib-jdk8:2.2.0
