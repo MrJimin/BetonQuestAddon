@@ -10,10 +10,12 @@ import com.github.mrjimin.betonquestaddon.betonquest.item.IaItemFactory
 import com.github.mrjimin.betonquestaddon.betonquest.item.IaItemSerializer
 import com.github.mrjimin.betonquestaddon.betonquest.item.NxItemFactory
 import com.github.mrjimin.betonquestaddon.betonquest.item.NxItemSerializer
+import com.github.mrjimin.betonquestaddon.betonquest.objectives.ChatObjectiveFactory
 import com.github.mrjimin.betonquestaddon.betonquest.objectives.impl.IaBlockBreakObjectiveFactory
 import com.github.mrjimin.betonquestaddon.betonquest.objectives.impl.IaBlockPlaceObjectiveFactory
 import com.github.mrjimin.betonquestaddon.betonquest.objectives.impl.NxBlockBreakObjectiveFactory
 import com.github.mrjimin.betonquestaddon.betonquest.objectives.impl.NxBlockPlaceObjectiveFactory
+import com.github.mrjimin.betonquestaddon.config.Settings
 import com.github.mrjimin.betonquestaddon.listener.IaReloadListener
 import com.github.mrjimin.betonquestaddon.listener.NxReloadListener
 import com.github.mrjimin.betonquestaddon.util.checkPlugin
@@ -32,8 +34,18 @@ class BetonQuestAddon(
     private val loggerFactory = betonQuest.loggerFactory
     private val server: Server = betonQuest.server
     private val data = PrimaryServerThreadData(server, server.scheduler, betonQuest)
+    private val registries = betonQuest.questRegistries
 
     fun initialize() {
+        loadCustomPlugin()
+        loadObjective()
+    }
+
+    fun loadObjective() {
+        registries.objective.register("chat",ChatObjectiveFactory)
+    }
+
+    fun loadCustomPlugin() {
         if ("Nexo".checkPlugin()) {
             loadNexo()
             plugin.logger.info("Nexo is initialized")
@@ -46,19 +58,17 @@ class BetonQuestAddon(
     }
 
     private fun registerEvents() {
-        if (plugin.config.getBoolean(CONFIG_AUTO_RELOAD)) plugin.logger.info("Auto Reload has been enabled.")
+        if (Settings.AUTO_RELOAD.toBoolean()) plugin.logger.info("Auto Reload has been enabled.")
 
         if ("Nexo".checkPlugin()) {
-            server.pluginManager.registerEvents(NxReloadListener(plugin), plugin)
+            server.pluginManager.registerEvents(NxReloadListener(), plugin)
         }
         if ("ItemsAdder".checkPlugin()) {
-            server.pluginManager.registerEvents(IaReloadListener(plugin), plugin)
+            server.pluginManager.registerEvents(IaReloadListener(), plugin)
         }
     }
 
     private fun loadNexo() {
-        val registries = betonQuest.questRegistries
-
         registerItem("nexo", NxItemFactory(), NxItemSerializer())
         registries.condition().registerCombined("nxBlockAt", NxBlockConditionFactory(data))
         registries.event().register("nxBlockAt", NxSetBlockAtEventFactory(data))
@@ -69,8 +79,6 @@ class BetonQuestAddon(
     }
 
     private fun loadItemsAdder() {
-        val registries = betonQuest.questRegistries
-
         registerItem("ia", IaItemFactory(), IaItemSerializer())
         registries.condition().registerCombined("iaBlockAt", IaBlockConditionFactory(data))
         registries.event().apply {
@@ -92,9 +100,5 @@ class BetonQuestAddon(
         val itemRegistry = betonQuest.featureRegistries.item()
         itemRegistry.register(name, factory)
         itemRegistry.registerSerializer(name, serializer)
-    }
-
-    companion object {
-        val CONFIG_AUTO_RELOAD = "setting.auto-reload"
     }
 }
