@@ -23,7 +23,7 @@ class BetonQuestAddonPlugin : JavaPlugin() {
     override fun onEnable() {
         CommandAPI.onEnable()
         Metrics(this, 26421)
-        BetonQuestAddon(this).initialize()
+        BetonQuestAddon.initialize()
         UpdateChecker.checkForUpdates(this, 120813)
         CommandsManger(this).loadsCommands()
         saveDefaultConfig()

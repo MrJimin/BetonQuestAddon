@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "com.github.mrjimin"
-version = "1.0.5"
+version = "1.1.0"
 
 repositories {
     maven {
@@ -19,12 +19,14 @@ repositories {
     maven("https://jitpack.io")
     // maven("https://nexus.betonquest.org/repository/betonquest/")
     maven("https://repo.codemc.org/repository/maven-public/")
+    maven("https://repo.nightexpressdev.com/releases")
 }
 
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.21.8-R0.1-SNAPSHOT")
     compileOnly("com.nexomc:nexo:1.8.0")
     compileOnly("com.github.LoneDev6","api-itemsadder","2.1.25")
+    compileOnly("su.nightexpress.coinsengine","CoinsEngine","2.5.0")
 
     implementation("dev.jorel:commandapi-bukkit-shade-mojang-mapped:10.1.0")
 

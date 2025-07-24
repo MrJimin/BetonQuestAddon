@@ -7,7 +7,7 @@ enum class Settings(
     val default: Any? = null
 ) {
     // setting
-    AUTO_RELOAD("setting.auto-reload", false),
+    // AUTO_RELOAD("setting.auto-reload", false),
 
     // objectives
     OBJ_CHAT("objectives.chatObjective.argumentName","cancel");

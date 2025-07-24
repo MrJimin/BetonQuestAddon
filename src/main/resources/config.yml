@@ -1,8 +1,3 @@
-# Enables automatic BetonQuest reload when Nexo's NexoItemsLoadedEvent is triggered.
-# Default value: false. TODO Set to true and restart the server to enable this feature.
-setting:
-  auto-reload: false
-
 objectives:
   chatObjective:
     # The argument name that is required to control chat message cancellation.
